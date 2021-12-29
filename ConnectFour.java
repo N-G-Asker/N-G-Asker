@@ -9,32 +9,32 @@ public class ConnectFour implements Game
      * Instance Variables
      */
 	private Board grid;
-    private Player user;
-    private Player guest;
+    private Player userA;
+    private Player userB;
 
 
 	/** 
      * Constructor 1: Single Player vs. Computer
      */
-	public ConnectFour(String playerName, boolean playerColor)
+	public ConnectFour(String playerName, String playerSymbol)
 	{
 		grid = new Board();
 
-        user = new Player(playerName, playerColor);
+        userA = new Player(playerName, playerSymbol);
 
-        guest =  new Player("Computer", !user.getColor());
+        userB =  new Player("Computer", Piece.mapToString(!userA.getSymbolAsBool()));
 	}
 
     /** 
-     * Constructor 2: Two Players
+     * Constructor 2: Two Players, User1 and User2
      */
-    public ConnectFour(String playerName, boolean playerColor, String guestName)
+    public ConnectFour(String user1Name, String user1Symbol, String user2Name)
 	{
 		grid = new Board();
 
-        user = new Player(playerName, playerColor);
+        userA = new Player(user1Name, user1Symbol);
 
-        guest =  new Player(guestName, !user.getColor());
+        userB =  new Player(user2Name, Piece.mapToString(!userA.getSymbolAsBool()));
 	}
 
     public void play()
@@ -183,25 +183,25 @@ public class ConnectFour implements Game
         
         if(coinFlip == 0)
         {
-            System.out.printf("\n... %s goes first this game!\n", user.getName());
-            return user;
+            System.out.printf("\n... %s goes first this game!\n", userA.getName());
+            return userA;
         }
         else
         {
-            System.out.printf("\n... %s goes first this game!\n", guest.getName());
-            return guest;
+            System.out.printf("\n... %s goes first this game!\n", userB.getName());
+            return userB;
         }
     }
 
     public Player setPlayer2(Player player1)
     {
-        if(player1 == user)
+        if(player1 == userA)
         {
-            return guest;
+            return userB;
         }
         else
         {
-            return user;
+            return userA;
         }
     }
 

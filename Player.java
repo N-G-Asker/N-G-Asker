@@ -6,23 +6,38 @@ public class Player
 {
 	// Instance Variables
 	private String name;
-	private boolean color;
+	private String symbol;
+	private boolean symbolAsBool;
 	
 	// Constructor
-	public Player(String name, boolean color)
+	public Player(String name, String symbol)
 	{
 		this.name = name;
-		this.color = color;
+		this.symbol = symbol;
+
+		if(symbol.equals("X"))
+		{
+			this.symbolAsBool = true;
+		}
+		else
+		{
+			this.symbolAsBool = false;
+		}
 	}
 
 	public String getName()
 	{
 		return name;
 	}
-	
-	public boolean getColor()
+
+	public String getSymbol()
 	{
-		return color;
+		return symbol;
+	}
+	
+	public boolean getSymbolAsBool()
+	{
+		return symbolAsBool;
 	}
 
 	public String toString()

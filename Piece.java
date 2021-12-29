@@ -1,25 +1,63 @@
 public class Piece
 {
 	// Instance Variable(s)
-	private boolean color; /* The game settings will determine the colors
-	 			   to which true and false values correspond. */
+	private boolean asBool;
 	
-	// Constructor
-	public Piece(boolean color)
+	private String asString;
+
+	private int asInt;
+	
+	/**
+	 * Constructor
+	 * 
+	 * @param eitherXorO capital letter "X" or "O" which will set the instance
+	 *  variable `asString` and indirectly set the instance variables `asBool`
+	 *  and `asInt`
+	 * 
+	 */
+	public Piece(String eitherXorO)
 	{
-		this.color = color;
+		this.asString = eitherXorO;
+
+		if(asString.equals("X"))
+		{
+			this.asBool = true;
+			this.asInt = 1;
+		}
+		else
+		{
+			this.asBool = false;
+			this.asInt = 10;
+		}
 	}
 
 	// Accessor Method(s)
-	public boolean getColor()
+	public boolean getAsBool()
 	{
-		return color;
+		return asBool;
+	}
+
+	public String getAsString()
+	{
+		return asString;
+	}
+
+	public int getAsInt()
+	{
+		return asInt;
 	}
 	
 	// toString()
 	public String toString()
 	{
-		if(color == true)
+		return asString;
+	}
+	
+
+	// Static Method / "Helper function"
+	public static String mapToString(boolean boolValue)
+	{
+		if(boolValue==true)
 		{
 			return "X";
 		}
@@ -29,4 +67,5 @@ public class Piece
 		}
 	}
 	
+
 }

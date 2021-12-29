@@ -30,7 +30,7 @@ public class Board
 	 * since it's the same for every row.
 	 * 
 	 * Relies on toString defined for piece, which prints an X or and O
-	 * depending on the color binary variable.
+	 * depending on the `value` binary variable.
 	 *	
 	 */
 	public void drawBoard()
@@ -85,14 +85,17 @@ public class Board
 
 		System.out.print("\n");
 	}
-	/**checkColumnFull() method should always precede this method call. */
+	/**
+	 * the checkColumnFull() method should always precede this method call. 
+	 * 
+	 */
 	public void addPiece(Player player, int column)
 	{
 		for(int row = gameboard.length -1 ; row >= 0; row--)
 		{
 			if(gameboard[row][column] == null) // "if slot open"
 			{
-				gameboard[row][column] = new Piece(player.getColor());
+				gameboard[row][column] = new Piece(player.getSymbol());
 
 				System.out.printf("\nPiece falls to position (%d, %d) on grid\n", (column+1), (6-row));
 
@@ -128,6 +131,24 @@ public class Board
 		return true;
 	}
 
+	/**
+	 * Encodes as an integer a given space on the board (which holds either a 
+	 * piece object or is blank, i.e., ==null), using a ternary logic scheme 
+	 * (i.e., a variable that can take on exactly one of three (3) possible
+	 * values):
+	 * 
+	 * null : 0
+	 * 
+	 * piece.asString.equals("X") : 1
+	 * 
+	 * piece.asString.equals("X") : 10
+	 * 
+	 * @param cell a space in the grid (i.e., the two-dimensional array
+	 * of type Piece[][] constituting the gameboard)
+	 * 
+	 * @return 0, 1, or 10 respectively corresponding to null, 
+	 * piece.asString.equals("X"), or piece.asString.equals("X")
+	 */
 	public int cellAsInt(Piece cell)
 	{
 		if(cell == null)
@@ -136,14 +157,9 @@ public class Board
 		}
 		else
 		{
-			if(cell.getColor()==true)
-			{
-				return 1;
-			}
-			else // color is false
-			{
-				return 10;
-			}
+			return cell.getAsInt(); 
+			// returns 1 if cell.asBool==true, i.e., cell.asString.equals("X")
+			// returns 10 if cell.asBool==false, i.e., cell.asString.equals("O")
 		}
 	}
 
@@ -176,7 +192,7 @@ public class Board
 	{
 		int rowSum = sumRow(row);
 
-		if(rowSum % 10 >= 4) // means there are 4 or more tokens with color=true
+		if(rowSum % 10 >= 4) // means there are 4 or more tokens with value=true
 		{
 			/* We only go through the trouble of creating the rowAsArray
 			   -- and thus introducing additional overhead/time cost -- once we
@@ -204,7 +220,7 @@ public class Board
 		}
 		/* else if chosen here because we can't have a win condition for one
 		   if the other has one */
-		else if(rowSum/10 >= 4) // only when 4 or more tokens have color==false
+		else if(rowSum/10 >= 4) // only when 4 or more tokens have value==false
 		{
 			int[] intR = rowAsIntArray(row);
 
@@ -259,7 +275,7 @@ public class Board
 	{
 		int columnSum = sumColumn(column);
 
-		if(columnSum % 10 >= 4) // means there are 4 or more tokens with color=true
+		if(columnSum % 10 >= 4) // means there are 4 or more tokens with value=true
 		{
 			/* We only go through the trouble of creating the rowAsArray
 			   -- and thus introducing additional overhead/time cost -- once we
@@ -287,7 +303,7 @@ public class Board
 		}
 		/* else if chosen here because we can't have a win condition for one
 		   if the other has one */
-		else if(columnSum/10 >= 4) // only when 4 or more tokens have color==false
+		else if(columnSum/10 >= 4) // only when 4 or more tokens have value==false
 		{
 			int[] intR = columnAsIntArray(column);
 
@@ -411,7 +427,7 @@ public class Board
 				diagSum += num;
 			}
 
-			if(diagSum % 10 >= 4) // means there are 4 or more tokens with color=true
+			if(diagSum % 10 >= 4) // means there are 4 or more tokens with value=true
 			{
 				int streak = 0;
 
@@ -434,7 +450,7 @@ public class Board
 			}
 			/* else if chosen here because we can't have a win condition for one
 			   if the other has one */
-			else if(diagSum/10 >= 4) // only when 4 or more tokens have color==false
+			else if(diagSum/10 >= 4) // only when 4 or more tokens have value==false
 			{
 				int streak = 0;
 
