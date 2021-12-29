@@ -5,11 +5,17 @@ import java.util.concurrent.TimeUnit;
 
 public class ConnectFour implements Game
 {
-	
+	/**
+     * Instance Variables
+     */
 	private Board grid;
     private Player user;
     private Player guest;
-	
+
+
+	/** 
+     * Constructor 1: Single Player vs. Computer
+     */
 	public ConnectFour(String playerName, boolean playerColor)
 	{
 		grid = new Board();
@@ -19,6 +25,9 @@ public class ConnectFour implements Game
         guest =  new Player("Computer", !user.getColor());
 	}
 
+    /** 
+     * Constructor 2: Two Players
+     */
     public ConnectFour(String playerName, boolean playerColor, String guestName)
 	{
 		grid = new Board();
