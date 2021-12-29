@@ -1,8 +1,0 @@
-public class Connect4Tester
-{
-    public static void main(String[] args)
-    {
-        String playerName = args[0];
-        boolean playerColor = args[1];
-    }
-}

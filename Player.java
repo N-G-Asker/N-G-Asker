@@ -60,6 +60,8 @@ public class Player
 							   "(Options: 1-7)\n > ");
 	
 			int move = s.nextInt() - 1;
+
+			s.close();
 			
 			return String.valueOf(move);
 		}

@@ -115,8 +115,6 @@ public class Board
 	
 	public boolean checkGridFull()
 	{
-		int columnFull = 0; // running tally of number of full columns
-
 		/* for every column, if we encounter one that is not full, we know
 			the grid is not full*/
 		for(int column = 0; column < gameboard[0].length; column++)
