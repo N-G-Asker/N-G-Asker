@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 
-public class ConnectFour implements Game
+public class CuatroEnRaya implements Game
 {
 	/**
      * Instance Variables
@@ -16,7 +16,7 @@ public class ConnectFour implements Game
 	/** 
      * Constructor 1: Single Player vs. Computer
      */
-	public ConnectFour(String playerName, String playerSymbol)
+	public CuatroEnRaya(String playerName, String playerSymbol)
 	{
 		grid = new Board();
 
@@ -28,7 +28,7 @@ public class ConnectFour implements Game
     /** 
      * Constructor 2: Two Players, User1 and User2
      */
-    public ConnectFour(String user1Name, String user1Symbol, String user2Name)
+    public CuatroEnRaya(String user1Name, String user1Symbol, String user2Name)
 	{
 		grid = new Board();
 
