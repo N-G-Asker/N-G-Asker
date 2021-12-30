@@ -196,7 +196,8 @@ public class Board
 		{
 			/* We only go through the trouble of creating the rowAsArray
 			   -- and thus introducing additional overhead/time cost -- once we
-			   are sure we have a possible win condition */
+			   are sure we have a possible win condition 
+			*/
 			int[] intR = rowAsIntArray(row);
 
 			int streak = 0;
@@ -489,4 +490,26 @@ public class Board
 
 		return intMatrix;
 	}	
+
+	public int[] flattenToArray(int[][] twoDimensionalArray)
+	{
+		int[] flat = new int[42];
+
+		int index = 0;
+
+		for(int i = 0; i < twoDimensionalArray.length; i++)
+		{
+			for(int j = 0; j < twoDimensionalArray[0].length; j++)
+			{
+				flat[index] = twoDimensionalArray[i][j];
+				index++;
+			}
+		}
+
+		return flat;
+	}
+
+
+	public 
+
 }
