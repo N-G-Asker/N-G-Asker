@@ -475,41 +475,4 @@ public class Board
 		}
 		return false;
 	}
-
-	public int[][] asIntMatrix()
-	{
-		int[][] intMatrix = new int[6][7];
-				
-		for(int row = 0; row < gameboard.length; row++)
-		{			
-			for(int column = 0; column < gameboard[0].length; column++)
-			{
-				intMatrix[row][column] = cellAsInt(gameboard[row][column]);
-			}
-		} 
-
-		return intMatrix;
-	}	
-
-	public int[] flattenToArray(int[][] twoDimensionalArray)
-	{
-		int[] flat = new int[42];
-
-		int index = 0;
-
-		for(int i = 0; i < twoDimensionalArray.length; i++)
-		{
-			for(int j = 0; j < twoDimensionalArray[0].length; j++)
-			{
-				flat[index] = twoDimensionalArray[i][j];
-				index++;
-			}
-		}
-
-		return flat;
-	}
-
-
-	public 
-
 }
