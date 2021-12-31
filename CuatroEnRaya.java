@@ -16,7 +16,7 @@ public class CuatroEnRaya implements Game
 	/** 
      * Constructor 1: Single Player vs. Computer
      */
-	public CuatroEnRaya(String playerName, String playerSymbol)
+	public CuatroEnRaya(String playerName, String playerSymbol) throws IllegalArgumentException
 	{
 		grid = new Board();
 
@@ -48,6 +48,8 @@ public class CuatroEnRaya implements Game
         while(true)
         {
             /* Player 1 move */
+            printTurnBanner(player1);
+
             String p1Move = "";
             
             while(p1Move.equals("") || isValidMove(p1Move)==false)
@@ -75,6 +77,7 @@ public class CuatroEnRaya implements Game
             }
 
             /* Player 2 move */
+            printTurnBanner(player2);
 
             String p2Move = "";
 
@@ -113,7 +116,8 @@ public class CuatroEnRaya implements Game
         /* Check 1: Whether column already full */
         if(grid.checkColumnFull(x) == true)
         {
-            System.out.println("Column is already full. Please select another column. "); 
+            System.err.println("\n\t!Column is already full! Please select "+
+                               "another column.\n"); 
             return false;
         }
         else
@@ -239,5 +243,10 @@ public class CuatroEnRaya implements Game
             System.out.println("\n" + "Error while trying to create suspense "+
                                 ie.getMessage());
         }
+    }
+
+    public void printTurnBanner(Player playerNum)
+    {
+        System.out.println("\n" + "~~~ " + playerNum.getName() + "'s turn ~~~");
     }
 }

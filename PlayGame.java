@@ -23,7 +23,7 @@ public class PlayGame
         }
         catch(IllegalArgumentException e)
         {
-            System.out.println("Error: Failed to properly enter the letter "+
+            System.err.println("Error: Failed to properly enter the letter "+
                                "'X' or 'O' as the second command-line "+
                                "argument.");
 
@@ -33,7 +33,7 @@ public class PlayGame
         }
         catch(ArrayIndexOutOfBoundsException err)
         {
-            System.out.println("Error: Failed to provide required"+
+            System.err.println("Error: Failed to provide required"+
             " command-line arguments.");
             
             printSyntax();
@@ -44,9 +44,9 @@ public class PlayGame
 
     public static void printSyntax()
     {
-        System.out.println("Please ensure you are following proper syntax.");
+        System.err.println("Please ensure you are following proper syntax.");
 
-        System.out.println("\n" + "USAGE" + "\n" + "\n" +
+        System.err.println("\n" + "USAGE" + "\n" + "\n" +
         "Single Player vs. Computer:" + "\n" + "\n" +
             "\t`java PlayGame <Player Name> <X or O>`" + "\n"+
             "\n" +
