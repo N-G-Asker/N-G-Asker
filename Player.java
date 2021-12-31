@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.lang.IllegalArgumentException;
 
 public class Player
 {
@@ -10,8 +11,15 @@ public class Player
 	private boolean symbolAsBool;
 	
 	// Constructor
-	public Player(String name, String symbol)
+	public Player(String name, String symbol) throws IllegalArgumentException
 	{
+		char symbolAsChar = symbol.toUpperCase().charAt(0);
+
+		if(symbolAsChar != 'X' && symbolAsChar != 'O')
+		{
+			throw new IllegalArgumentException();
+		}
+
 		this.name = name;
 		this.symbol = symbol;
 
