@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 import java.lang.IllegalArgumentException;
 
 public class Player
@@ -66,12 +65,11 @@ public class Player
 
 			System.out.println("...Computer is thinking...");
 
-			wait(2000);
+			CuatroEnRaya.wait(2000);
 
 			System.out.print("\n> Computer places piece in column " + (int)(columnInt+1) + "\n ");
 
 			return columnStr;
-
 		}
 		else
 		{
@@ -110,21 +108,5 @@ public class Player
 			
 			return String.valueOf(move);
 		}
-
     }
-
-	public void wait(int ms)
-    {    
-        try
-        {
-            TimeUnit.MILLISECONDS.sleep(ms);
-        }
-        catch(InterruptedException ie)
-        {
-            System.err.println("\n" + "Error while trying to create suspense "+
-                                ie.getMessage());
-        }
-    }
-
-
 }

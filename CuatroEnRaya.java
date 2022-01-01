@@ -232,7 +232,7 @@ public class CuatroEnRaya implements Game
 
 
     // Injecting a brief wait time for game UX (creates suspense?)
-    public void wait(int ms)
+    public static void wait(int ms)
     {    
         try
         {
