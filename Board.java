@@ -63,6 +63,8 @@ public class Board
 			}
 			
 			System.out.print( " " + (6-row) + "\n");
+
+			CuatroEnRaya.wait(200); // slight delay makes pacing more natural
 		} 
 
 		System.out.print("\t    "); /* Necessary to position the column
@@ -98,6 +100,8 @@ public class Board
 				gameboard[row][column] = new Piece(player.getSymbol());
 
 				System.out.printf("\nPiece falls to position (%d, %d) on grid\n", (column+1), (6-row));
+
+				CuatroEnRaya.wait(600);
 
 				break;
 			}

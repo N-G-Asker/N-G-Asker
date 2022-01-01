@@ -128,7 +128,7 @@ public class CuatroEnRaya implements Game
 	
 	public void executeMove(String move, Player player)
 	{
-        wait(1900);
+        wait(1000);
         
         int x = Integer.parseInt(move); // input should be an integer 0-6
         
@@ -179,7 +179,7 @@ public class CuatroEnRaya implements Game
                            " which player goes first...");
 
         // Injecting a brief wait time for game UX (creates suspense?)
-        wait(2300);
+        wait(2000);
         
         Random r = new Random();
         
@@ -211,6 +211,8 @@ public class CuatroEnRaya implements Game
 
     public void displayGrid()
     {
+        wait(500); // slight delay makes game feel more natural
+
         grid.drawBoard();
     }
 
@@ -245,8 +247,19 @@ public class CuatroEnRaya implements Game
         }
     }
 
+    /**
+     * The wait methods bookending the print statement are called to make the
+     * UI/UX "look and feel" more natural. Slowing down the game-pace with such 
+     * small delays improves the playing experience for end-users.
+     * 
+     * @param playerNum either player1 or player2 Player instances
+     */
     public void printTurnBanner(Player playerNum)
     {
+        wait(650);
+
         System.out.println("\n" + "~~~ " + playerNum.getName() + "'s turn ~~~");
+
+        wait(650);
     }
 }
