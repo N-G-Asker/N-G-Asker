@@ -26,7 +26,7 @@ My first exposure to coding came while I was a cybersecurity consultant (2017 - 
 
 The first half of my graduate program consisted of fundamental coursework in data structures, algorithms, systems programming, and mathematics. Through this portion of the program, I became a proficient programmer in C, Python, and Java and developed strong problem-solving skills. In the latter half, I shifted focus to topics in Artificial Intelligence, including Natural Language Processing (NLP), Language Generation, Computer Vision, and Robot Learning. I had the opportunity to conduct research projects in these areas:
 
-- TasteRank: Personalized Image Search and Recommendation [[Paper]](https://github.com/N-G-Asker/TasteRank/blob/main/TasteRank-paper.pdf))
+- TasteRank: Personalized Image Search and Recommendation [[Paper]](https://github.com/N-G-Asker/TasteRank/blob/main/TasteRank-paper.pdf)
   
 - Whiteboard then Code: Refining Code Generation via Iterative Automatic Feedback from Peer LLMs [[Paper]](https://github.com/N-G-Asker/whiteboard-then-code/blob/main/whiteboard-then-code_research-paper.pdf)
 
