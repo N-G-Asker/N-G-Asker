@@ -20,7 +20,7 @@ I am especially excited by the prospect of improving model performance and decis
 ## Background
 I like coding because it lets me find flow, be curious, and create. I'm interested in machine learning in particular because of its potential to solve otherwise intractable problems.
 
-I recently graduated with a masters in computer science from Columbia University (May 2024). I chose the Machine Learning track  as my specialization and am especially passionate about Large Language Models (LLMs) and neural networks.
+I recently graduated with a masters in computer science from Columbia University (May 2024). I chose the Machine Learning track  as my specialization and am especially passionate about Large Language Models (LLMs) and deep learning.
 
 My first exposure to coding came while I was a cybersecurity consultant (2017 - 2021), where I had the opportunity to pick up Python. I felt great joy learning to program for the first time and suddenly realized how much constructive power a programmer has – literally at their fingertips – with the capacity to create highly useful and beautiful things through code. So, I committed to going back to school to study computer science – to build a firm engineering foundation and pivot my career into something I loved.
 
