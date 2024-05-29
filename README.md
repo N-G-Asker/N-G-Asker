@@ -12,7 +12,7 @@ My current research interest is in LLM-powered autonomous agents.
 
 I am especially excited by the prospect of improving model performance and decision-making through 
 
-- providing relevant information as context using intelligent search techniques (vectorized/embedding-based information retrieval), and
+- retrieval-augmented generation (RAG): providing relevant information as context using intelligent search techniques (using vector- or embedding-indexed databases), and
   
 - self-improvement and automatic feedback mechanisms such as self-refine.
 
