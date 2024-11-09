@@ -3,7 +3,7 @@ N-G-Asker/N-G-Asker is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 Nicholas Asker  
-Software Engineer focused on AI and Computer Security
+Software Engineer focused on AI and Computer Security  
 MS in Computer Science, Columbia University  
 Machine Learning track  
 nga2120@columbia.edu
