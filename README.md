@@ -6,7 +6,6 @@ You can click the Preview link to take a look at your changes.
 Software Engineer  
 Founding Engineer, *Canine Cyber*  
 MS in Computer Science, *Columbia University*  
-Interests: AI and Computer Security  
 
 I founded the software company Canine Cyber after graduating with an MS in Computer Science from Columbia University in May 2024. In addition to my background developing production-level code, I have four years of professional experience in cybersecurity and IT consulting and hold multiple computer-security certifications, including CISSP. I studied economics and philosophy for my bachelor's at Brown University.
 
@@ -21,6 +20,8 @@ The first half of my graduate program consisted of fundamental coursework in dat
 - __Whiteboard then Code__: Refining Code Generation via Iterative Automatic Feedback from Peer LLMs [[Paper]](https://github.com/N-G-Asker/whiteboard-then-code/blob/main/whiteboard-then-code_research-paper.pdf)
 
 While back in school, I repeatedly put my classroom knowledge to the test as a software developer. In 2022, I was a researcher in an applied physics research group at Columbia, building programs supporting the professor’s high-tech lab. Then in 2024, coinciding with my graduation and the launch of Canine Cyber, I was an AI Software Engineering Intern at Qualitest. I developed back-end web and database services for an AI platform on a full-stack software development team, implementing high-priority requirements, including functionality to ingest and process Excel spreadsheets.
+
+At present, I am focused on building good software and applying machine learning and AI to the field of computer security.
 
 
 
