@@ -3,10 +3,10 @@ N-G-Asker/N-G-Asker is a ✨ special ✨ repository because its `README.md` (thi
 You can click the Preview link to take a look at your changes.
 --->
 Nicholas Asker  
-Software Engineer
-Founding Engineer, Canine Cyber
-MS in Computer Science, Columbia University
-Interests: AI and Computer Security
+Software Engineer  
+Founding Engineer, Canine Cyber  
+MS in Computer Science, Columbia University  
+Interests: AI and Computer Security  
 
 I founded the software company Canine Cyber after graduating with an MS in Computer Science from Columbia University in May 2024. In addition to my background developing production-level code, I have four years of professional experience in cybersecurity and IT consulting and hold multiple computer-security certifications, including CISSP. I studied economics and philosophy for my bachelor's at Brown University.
 
